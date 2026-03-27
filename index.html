@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="click-sound" src="salah.mp3" preload="auto"></audio>
+
+<div id="splash">
+    <div class="splash-content">
+        <img src="1.png" alt="Logo" class="pulsing-logo">
+        <h1 class="logo-text"><span class="diamond">Diamond</span> Hub</h1>
+    </div>
+</div>
+
+<div class="fixed-background"></div>
+
+<div id="main">
+    <div class="fixed-header-container">
+        <h1 class="main-title"><span class="diamond">Diamond</span> Hub</h1>
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('mods', this)">
+                <img src="Pi.png" class="tab-img"><span>Mods</span>
+            </div>
+            <div class="tab" onclick="showTab('maps', this)">
+                <img src="Ma.png" class="tab-img"><span>Maps</span>
+            </div>
+            <div class="tab" onclick="showTab('mc', this)">
+                <img src="Mi.png" class="tab-img"><span>MC</span>
+            </div>
+            <div class="tab" onclick="showTab('skins', this)">
+                <img src="Sk.png" class="tab-img"><span>Skins</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="scrollable-area">
+        <div id="mods" class="tab-content"><div id="mods-list" class="mods-container"></div></div>
+        <div id="maps" class="tab-content" style="display:none;"><div id="maps-list" class="mods-container"></div></div>
+        <div id="mc" class="tab-content" style="display:none;"><div id="mc-list" class="mods-container"></div></div>
+        <div id="skins" class="tab-content" style="display:none;"><div id="skins-list" class="mods-container"></div></div>
+    </div>
+</div>
+
+<div id="mod-detail" onclick="closeModDetailOutside(event)">
+    <div class="detail-box">
+        <span class="close-btn" onclick="closeModDetail()">✖</span>
+        <img id="mod-img" src="">
+        <h2 id="mod-name"></h2>
+        <p id="mod-desc"></p>
+        <button class="modal-download-btn" onclick="downloadMod()">تنزيل مباشر</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
